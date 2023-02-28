@@ -6,9 +6,9 @@ I'm a software developer who specializes in C# and .NET development. I love buil
 
 Here are a few of the projects I've worked on recently:
 
-- 🎮 **TCAdmin v3:** A game control panel for managing game servers, built with Blazor and .NET Core. It allows game server owners to easily manage their servers, view server logs, and perform updates.
+- 🎮 **[TCAdmin v3](https://tcadmin.com/):** A game control panel for managing game servers, built with Blazor and .NET Core. It allows game server owners to easily manage their servers, view server logs, and perform updates.
 
-- 🔥 **STRP:** A FiveM roleplay server built using LUA. [STRP](https://forum.spaceturtl.es/)
+- 🔥 **[STRP](https://forum.spaceturtl.es/):** A FiveM roleplay server built using LUA.
 
 You can find more of my projects on my [GitHub profile](https://github.com/Alexr03).
 

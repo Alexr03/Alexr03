@@ -1,7 +1,9 @@
 <div align="center">
-        <picture><img alt="Logo" src="./x3dev_banner.svg" width="40%"></picture>
-        <br>
-        <br>
+        <picture><img alt="Logo" src="./banner.svg" width="100%"></picture>
+
+<picture><img alt="Logo" src="./profile-3d-contrib/profile-night-view.svg" width="100%"></picture>
+<a href="https://x3.dev">
+</a>
 </div>
 
 # Hi there, I'm Alexr03 👋

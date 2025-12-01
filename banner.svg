@@ -1,93 +1,93 @@
-<svg viewBox="0 0 1200 400" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 1000 240" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="0%" y2="100%">
       <stop offset="0%" style="stop-color:#00000f;stop-opacity:1" />
-      <stop offset="50%" style="stop-color:#00000f;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#00000f;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#000008;stop-opacity:1" />
     </linearGradient>
     
-    <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#00d4ff;stop-opacity:1" />
-      <stop offset="50%" style="stop-color:#0099ff;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#00d4ff;stop-opacity:1" />
-    </linearGradient>
-    
-    <filter id="glow">
-      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
-      <feMerge>
-        <feMergeNode in="coloredBlur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-    
-    <filter id="codeGlow">
-      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
-      <feMerge>
-        <feMergeNode in="coloredBlur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
+    <style>
+      @keyframes typing {
+        from { width: 0; }
+        to { width: 100%; }
+      }
+      .typewriter {
+        overflow: hidden;
+        white-space: nowrap;
+        animation: typing 2s steps(30, end) forwards;
+      }
+    </style>
   </defs>
   
-  <rect width="1200" height="400" fill="url(#bgGradient)"/>
+  <!-- Terminal Window -->
+  <rect x="0" y="0" width="1000" height="240" fill="url(#bgGradient)" rx="12" ry="12" stroke="#1a1a2e" stroke-width="1"/>
   
-  <g opacity="0.2">
-    <line x1="0" y1="100" x2="1200" y2="100" stroke="#00d4ff" stroke-width="1">
-      <animate attributeName="opacity" values="0.2;0.5;0.2" dur="3s" repeatCount="indefinite"/>
-    </line>
-    <line x1="0" y1="200" x2="1200" y2="200" stroke="#00d4ff" stroke-width="1">
-      <animate attributeName="opacity" values="0.5;0.2;0.5" dur="3s" repeatCount="indefinite"/>
-    </line>
-    <line x1="0" y1="300" x2="1200" y2="300" stroke="#00d4ff" stroke-width="1">
-      <animate attributeName="opacity" values="0.2;0.5;0.2" dur="3s" repeatCount="indefinite"/>
-    </line>
+  <!-- Terminal Header -->
+  <rect x="0" y="0" width="1000" height="40" fill="#00000f" rx="12" ry="12"/>
+  <rect x="0" y="28" width="1000" height="12" fill="#00000f"/>
+  
+  <!-- Window Buttons -->
+  <circle cx="30" cy="20" r="6" fill="#f38ba8"/>
+  <circle cx="55" cy="20" r="6" fill="#fab387"/>
+  <circle cx="80" cy="20" r="6" fill="#a6e3a1"/>
+  
+  <!-- Terminal Title -->
+  <text x="500" y="26" font-family="monospace" font-size="14" fill="#cdd6f4" text-anchor="middle" opacity="0.8">terminal@x3.dev</text>
+  
+  <!-- Terminal Content -->
+  <g font-family="monospace" fill="#cdd6f4">
+    <!-- Prompt -->
+    <text x="40" y="85" font-size="18" fill="#89b4fa">x3Dev</text>
+    <text x="115" y="85" font-size="18" fill="#f5e0dc">❯</text>
+    
+    <!-- Mask for typewriter effect -->
+    <defs>
+      <mask id="typeMask">
+        <rect x="145" y="65" height="25" fill="white">
+          <animate attributeName="width" from="0" to="480" dur="2s" fill="freeze"/>
+        </rect>
+      </mask>
+    </defs>
+    
+    <!-- Text with mask applied -->
+    <text x="145" y="85" font-size="18" fill="#cdd6f4" mask="url(#typeMask)">Welcome to Alexr03's profile</text>
+    
+    <!-- Cursor during typing -->
+    <rect y="68" width="12" height="22" fill="#89dceb">
+      <animate attributeName="x" from="145" to="625" dur="2s" fill="freeze"/>
+      <animate attributeName="opacity" values="1;1;0" dur="2s" fill="freeze"/>
+    </rect>
+    
+    <!-- Output lines with staggered fade-in -->
+    <!-- Loading message that disappears -->
+    <text x="40" y="130" font-size="16" fill="#fab387" opacity="0">
+      ⟳ Loading from API...
+      <animate attributeName="opacity" values="0;1;1;0" begin="2.2s" dur="1s" fill="freeze"/>
+    </text>
+    
+    <!-- Success message that replaces loading -->
+    <text x="40" y="130" font-size="16" fill="#a6e3a1" opacity="0">
+      ✓ Loaded Alexr03 Profile
+      <animate attributeName="opacity" values="0;1" begin="3.2s" dur="0.3s" fill="freeze"/>
+    </text>
+    
+    <text x="40" y="160" font-size="16" fill="#89dceb" opacity="0">
+      C# • Blazor • Kubernetes • Docker • DevOps
+      <animate attributeName="opacity" values="0;1" begin="3.7s" dur="0.3s" fill="freeze"/>
+    </text>
+    
+    <!-- Second prompt line -->
+    <text x="40" y="200" font-size="18" fill="#89b4fa" opacity="0">
+      x3Dev
+      <animate attributeName="opacity" values="0;1" begin="4.2s" dur="0.3s" fill="freeze"/>
+    </text>
+    <text x="115" y="200" font-size="18" fill="#f5e0dc" opacity="0">
+      ❯
+      <animate attributeName="opacity" values="0;1" begin="4.2s" dur="0.3s" fill="freeze"/>
+    </text>
+    
+    <!-- Blinking cursor at end -->
+    <rect x="145" y="183" width="12" height="22" fill="#89dceb" opacity="0">
+      <animate attributeName="opacity" values="0;0;1;0;1" dur="1s" begin="4.5s" repeatCount="indefinite"/>
+    </rect>
   </g>
-  
-  <circle cx="200" cy="80" r="2" fill="#00d4ff" opacity="0.6">
-    <animate attributeName="cy" values="80;320;80" dur="8s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values="0.6;0.2;0.6" dur="8s" repeatCount="indefinite"/>
-  </circle>
-  <circle cx="400" cy="120" r="2" fill="#0099ff" opacity="0.6">
-    <animate attributeName="cy" values="120;280;120" dur="10s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values="0.6;0.3;0.6" dur="10s" repeatCount="indefinite"/>
-  </circle>
-  <circle cx="800" cy="100" r="2" fill="#00d4ff" opacity="0.6">
-    <animate attributeName="cy" values="100;300;100" dur="9s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values="0.6;0.2;0.6" dur="9s" repeatCount="indefinite"/>
-  </circle>
-  <circle cx="1000" cy="150" r="2" fill="#0099ff" opacity="0.6">
-    <animate attributeName="cy" values="150;250;150" dur="7s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values="0.6;0.4;0.6" dur="7s" repeatCount="indefinite"/>
-  </circle>
-  
-  <g filter="url(#codeGlow)" opacity="0.3">
-    <text x="150" y="220" font-family="monospace" font-size="120" fill="#00d4ff">{</text>
-    <text x="1000" y="220" font-family="monospace" font-size="120" fill="#00d4ff">}</text>
-    <animate attributeName="opacity" values="0.3;0.5;0.3" dur="2s" repeatCount="indefinite"/>
-  </g>
-  
-  <text x="600" y="230" font-family="Courier New, monospace" font-size="110" font-weight="bold" fill="url(#textGradient)" text-anchor="middle" filter="url(#glow)">
-    x3Dev
-    <animate attributeName="opacity" values="1;0.8;1" dur="3s" repeatCount="indefinite"/>
-  </text>
-  
-  <line x1="350" y1="250" x2="850" y2="250" stroke="#00d4ff" stroke-width="3" opacity="0.6">
-    <animate attributeName="x2" values="350;850;350;850" dur="4s" repeatCount="indefinite"/>
-  </line>
-  
-  <g font-family="monospace" font-size="12" fill="#00d4ff" opacity="0.3">
-    <text x="50" y="50">01001000</text>
-    <text x="50" y="350">11010110</text>
-    <text x="1100" y="50">10110101</text>
-    <text x="1100" y="350">01110010</text>
-    <animate attributeName="opacity" values="0.3;0.6;0.3" dur="2s" repeatCount="indefinite"/>
-  </g>
-  
-  <rect x="860" y="195" width="15" height="45" fill="#00d4ff">
-    <animate attributeName="opacity" values="0;1;0" dur="1s" repeatCount="indefinite"/>
-  </rect>
-  
-  <rect x="0" y="0" width="1200" height="2" fill="#00d4ff" opacity="0.5">
-    <animate attributeName="y" values="0;400;0" dur="5s" repeatCount="indefinite"/>
-  </rect>
 </svg>

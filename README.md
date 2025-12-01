@@ -1,3 +1,9 @@
+<div align="center">
+        <picture><img alt="Logo" src="./x3dev_banner.svg" width="40%"></picture>
+        <br>
+        <br>
+</div>
+
 # Hi there, I'm Alexr03 👋
 
 I'm a software developer who specializes in C# and .NET development. I love building high-performance, scalable applications. In addition to C#, I have experience with a variety of other technologies, including Java, web development frameworks like Blazor and ASP.NET, and backend frameworks like .NET Core.

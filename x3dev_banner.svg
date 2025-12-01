@@ -1,6 +1,5 @@
 <svg viewBox="0 0 1200 400" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <!-- Gradient definitions -->
     <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#0a0e27;stop-opacity:1" />
       <stop offset="50%" style="stop-color:#1a1f3a;stop-opacity:1" />
@@ -13,7 +12,6 @@
       <stop offset="100%" style="stop-color:#00d4ff;stop-opacity:1" />
     </linearGradient>
     
-    <!-- Glow filter -->
     <filter id="glow">
       <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
       <feMerge>
@@ -22,7 +20,6 @@
       </feMerge>
     </filter>
     
-    <!-- Code symbol filter -->
     <filter id="codeGlow">
       <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
       <feMerge>
@@ -32,10 +29,8 @@
     </filter>
   </defs>
   
-  <!-- Background -->
   <rect width="1200" height="400" fill="url(#bgGradient)"/>
   
-  <!-- Animated grid lines -->
   <g opacity="0.2">
     <line x1="0" y1="100" x2="1200" y2="100" stroke="#00d4ff" stroke-width="1">
       <animate attributeName="opacity" values="0.2;0.5;0.2" dur="3s" repeatCount="indefinite"/>
@@ -48,7 +43,6 @@
     </line>
   </g>
   
-  <!-- Floating particles -->
   <circle cx="200" cy="80" r="2" fill="#00d4ff" opacity="0.6">
     <animate attributeName="cy" values="80;320;80" dur="8s" repeatCount="indefinite"/>
     <animate attributeName="opacity" values="0.6;0.2;0.6" dur="8s" repeatCount="indefinite"/>
@@ -66,26 +60,21 @@
     <animate attributeName="opacity" values="0.6;0.4;0.6" dur="7s" repeatCount="indefinite"/>
   </circle>
   
-  <!-- Code brackets decoration -->
   <g filter="url(#codeGlow)" opacity="0.3">
-    <text x="150" y="220" font-family="monospace" font-size="120" fill="#00d4ff">&lt;</text>
-    <text x="1000" y="220" font-family="monospace" font-size="120" fill="#00d4ff">&gt;</text>
+    <text x="150" y="220" font-family="monospace" font-size="120" fill="#00d4ff">{</text>
+    <text x="1000" y="220" font-family="monospace" font-size="120" fill="#00d4ff">}</text>
     <animate attributeName="opacity" values="0.3;0.5;0.3" dur="2s" repeatCount="indefinite"/>
   </g>
   
-  <!-- Main text -->
-  <text x="600" y="230" font-family="'Courier New', monospace" font-size="110" font-weight="bold" 
-        fill="url(#textGradient)" text-anchor="middle" filter="url(#glow)">
+  <text x="600" y="230" font-family="Courier New, monospace" font-size="110" font-weight="bold" fill="url(#textGradient)" text-anchor="middle" filter="url(#glow)">
     x3Dev
     <animate attributeName="opacity" values="1;0.8;1" dur="3s" repeatCount="indefinite"/>
   </text>
   
-  <!-- Underline effect -->
   <line x1="350" y1="250" x2="850" y2="250" stroke="#00d4ff" stroke-width="3" opacity="0.6">
     <animate attributeName="x2" values="350;850;350;850" dur="4s" repeatCount="indefinite"/>
   </line>
   
-  <!-- Binary code stream -->
   <g font-family="monospace" font-size="12" fill="#00d4ff" opacity="0.3">
     <text x="50" y="50">01001000</text>
     <text x="50" y="350">11010110</text>
@@ -94,12 +83,10 @@
     <animate attributeName="opacity" values="0.3;0.6;0.3" dur="2s" repeatCount="indefinite"/>
   </g>
   
-  <!-- Terminal cursor effect -->
   <rect x="860" y="195" width="15" height="45" fill="#00d4ff">
     <animate attributeName="opacity" values="0;1;0" dur="1s" repeatCount="indefinite"/>
   </rect>
   
-  <!-- Scanning line effect -->
   <rect x="0" y="0" width="1200" height="2" fill="#00d4ff" opacity="0.5">
     <animate attributeName="y" values="0;400;0" dur="5s" repeatCount="indefinite"/>
   </rect>
